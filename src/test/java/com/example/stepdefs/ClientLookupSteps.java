@@ -33,7 +33,7 @@ public class ClientLookupSteps extends BaseTest{
     public void theResponseWithSuccessIsReturned() {
         restAssuredThat(response -> response
                 .statusCode(HttpStatus.SC_OK)
-                .body("", is(notNullValue())));
+                .body("opt", is(notNullValue())));
     }
 
     @Then("The response with bad request is returned")
